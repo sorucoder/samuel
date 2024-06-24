@@ -1,0 +1,18 @@
+{{ define "header" }}
+<h1 style="background-color: #3171B8; color: white; text-align: center; font-weight: lighter;">S.A.M.U.E.L.</h1>
+{{ end }}
+{{ define "button" }}
+<a
+    href="{{ get . "url" }}"
+    style="
+        background-color: #3171B8;
+        color: white;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em; 
+        padding: 1em;
+        text-decoration: none;
+        border-radius: 1em;"
+>
+    {{ get . "text" }}
+</a>
+{{ end }}

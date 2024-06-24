@@ -1,0 +1,60 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "S.A.M.U.E.L. Development SPA with Firefox",
+            "type": "firefox",
+            "firefoxExecutable": "/usr/lib/firefox-developer-edition/firefox",
+            "profileDir": "/home/sorucoder/.mozilla/firefox/8izk0e3w.dev-edition-default",
+            "request": "launch",
+            "url": "http://localhost:8080/",
+            "webRoot": "${workspaceFolder}/web",
+            "pathMappings": [
+                {
+                    "url": "webpack://samuel/",
+                    "path": "${workspaceFolder}/web/"
+                }
+            ]
+        },
+        {
+            "name": "S.A.M.U.E.L. Development SPA with Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080/",
+            "webRoot": "${workspaceFolder}/web"
+        },
+        {
+            "name": "S.A.M.U.E.L. Development API",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "envFile": [
+                "${workspaceRoot}/internal/configuration/development.env"
+            ],
+            "program": "${workspaceRoot}/main.go"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "S.A.M.U.E.L. Development with Chrome",
+            "configurations": [
+                "S.A.M.U.E.L. Development API",
+                "S.A.M.U.E.L. Development SPA with Chrome"
+            ],
+            "stopAll": true,
+            "preLaunchTask": "Launch S.A.M.U.E.L. Development SPA"
+        },
+        {
+            "name": "S.A.M.U.E.L. Development with Firefox",
+            "configurations": [
+                "S.A.M.U.E.L. Development API",
+                "S.A.M.U.E.L. Development SPA with Firefox"
+            ],
+            "stopAll": true,
+            "preLaunchTask": "Launch S.A.M.U.E.L. Development SPA"
+        }
+    ]
+}

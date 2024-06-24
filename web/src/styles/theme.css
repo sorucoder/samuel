@@ -1,0 +1,50 @@
+/* Modifications */
+.btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-hover-bg: rgb(var(--bs-primary-rgb), 50%);
+}
+
+.nav {
+    --bs-nav-link-color: inherit;
+    --bs-nav-link-hover-color: var(--bs-primary);
+}
+
+.pagination {
+    --bs-pagination-active-bg: var(--bs-primary);
+}
+
+/* Light Theme Modifications */
+:root[data-bs-theme=light] {
+    --bs-primary: #3171B8;
+    --bs-primary-rgb: 49, 113, 184;
+    --bs-dark: #282828;
+    --bs-dark-rgb: 40, 40, 40;
+    --bs-light: #dddddd;
+    --bs-light-rgb: 221, 221, 221;
+}
+
+:root[data-bs-theme=light] .text-bg-light {
+    color: #000 !important;
+}
+
+:root[data-bs-theme=light] .text-bg-dark {
+    color: #fff !important;
+}
+
+/* Dark Theme Modifications */
+:root[data-bs-theme=dark] {
+    --bs-primary: #3171B8;
+    --bs-primary-rgb: 49, 113, 184;
+    --bs-dark: #dddddd;
+    --bs-dark-rgb: 221, 221, 221;
+    --bs-light: #282828;
+    --bs-light-rgb: 40, 40, 40;
+}
+
+:root[data-bs-theme=dark] .text-bg-light {
+    color: #fff !important;
+}
+
+:root[data-bs-theme=dark] .text-bg-dark {
+    color: #000 !important;
+}

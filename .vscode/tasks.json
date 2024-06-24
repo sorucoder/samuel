@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "label": "Launch S.A.M.U.E.L. Development SPA",
+            "type": "npm",
+            "script": "start",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "isBackground": true,
+            "path": "web",
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "^$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Starting the development server...",
+                    "endsPattern": "webpack [0-9]+\\.[0-9]+\\.[0-9]+ compiled"
+                }
+            },
+            "detail": "react-scripts start"
+        }
+    ]
+}

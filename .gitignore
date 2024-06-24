@@ -1,0 +1,7 @@
+*.envrc
+go.sum
+internal/configuration/*.env
+internal/database/migrations/sql-migrate.yml
+web/dist
+web/node_modules
+web/package-lock.json
